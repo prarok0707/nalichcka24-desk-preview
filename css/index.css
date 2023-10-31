@@ -1301,6 +1301,17 @@ body.no-scroll {
     padding: 30px 0 0 0;
 }
 
+.index-main_fullscreen {
+    padding: 0;
+}
+
+.index-main_fullscreen .index-main__wrapper {
+    min-height: calc(var(--fullscreen) - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media (min-width: 576px) {
     .index-main {
         --border-radius: 30px;
@@ -1327,7 +1338,7 @@ body.no-scroll {
 }
 
 @media (min-width: 992px) {
-    .index-main__wrapper {
+    .index-main__body {
         display: flex;
         justify-content: space-between;
     }

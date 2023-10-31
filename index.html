@@ -69,61 +69,69 @@
       </header>
       <main class="content">
         <div class="index">
-          <div class="index-main">
+          <div class="index-main index-main_fullscreen">
             <div class="container">
               <div class="index-main__wrapper">
-                <div class="index-main__preview">
-                  <h1 class="index-main__title">Бесплатный<br />заем</h1>
-                  <div class="index-main__subtitle">
-                    Деньги у Вас уже в
-                    <time class="index-main__time"
-                      ><img src="./images/index-main/icon_01.svg" alt="icon" />
-                      12:20</time
-                    >
-                  </div>
-                  <picture class="index-main__img"
-                    ><source
-                      srcset="./images/index-main/img_01.png"
-                      type="image/png"
-                      media="(min-width: 576px)" />
-                    <img src="./images/index-main/img_01-mobile.png" alt="img"
-                  /></picture>
-                </div>
-                <div class="index-main__calc calc">
-                  <div class="calc__wrapper">
-                    <div class="calc__range">
-                      <span class="calc__label"
-                        >Сумма займа
-                        <span data-range-slider-sum>30 000₽</span></span
+                <div class="index-main__body">
+                  <div class="index-main__preview">
+                    <h1 class="index-main__title">Бесплатный<br />заем</h1>
+                    <div class="index-main__subtitle">
+                      Деньги у Вас уже в
+                      <time class="index-main__time"
+                        ><img
+                          src="./images/index-main/icon_01.svg"
+                          alt="icon"
+                        />
+                        12:20</time
                       >
-                      <div
-                        class="calc__range-target"
-                        data-range-slider="sum"
-                      ></div>
                     </div>
-                    <div class="calc__slider">
-                      <span class="calc__label"
-                        >На срок <span data-calc-date-value>15 дней</span></span
-                      >
-                      <div class="calc__swiper">
-                        <div class="swiper" data-calc-swiper>
-                          <div class="swiper-wrapper"></div>
-                        </div>
+                    <picture class="index-main__img"
+                      ><source
+                        srcset="./images/index-main/img_01.png"
+                        type="image/png"
+                        media="(min-width: 576px)" />
+                      <img
+                        src="./images/index-main/img_01-mobile.png"
+                        alt="img"
+                    /></picture>
+                  </div>
+                  <div class="index-main__calc calc">
+                    <div class="calc__wrapper">
+                      <div class="calc__range">
+                        <span class="calc__label"
+                          >Сумма займа
+                          <span data-range-slider-sum>30 000₽</span></span
+                        >
                         <div
-                          class="calc__swiper-control swiper-button-prev"
-                        ></div>
-                        <div
-                          class="calc__swiper-control swiper-button-next"
+                          class="calc__range-target"
+                          data-range-slider="sum"
                         ></div>
                       </div>
+                      <div class="calc__slider">
+                        <span class="calc__label"
+                          >На срок
+                          <span data-calc-date-value>15 дней</span></span
+                        >
+                        <div class="calc__swiper">
+                          <div class="swiper" data-calc-swiper>
+                            <div class="swiper-wrapper"></div>
+                          </div>
+                          <div
+                            class="calc__swiper-control swiper-button-prev"
+                          ></div>
+                          <div
+                            class="calc__swiper-control swiper-button-next"
+                          ></div>
+                        </div>
+                      </div>
+                      <button
+                        class="calc__button button button_big button_icon"
+                        type="button"
+                      >
+                        <img src="./images/UI/buttons/icon_01.png" alt="icon" />
+                        Оформить бесплатно
+                      </button>
                     </div>
-                    <button
-                      class="calc__button button button_big button_icon"
-                      type="button"
-                    >
-                      <img src="./images/UI/buttons/icon_01.png" alt="icon" />
-                      Оформить бесплатно
-                    </button>
                   </div>
                 </div>
               </div>
