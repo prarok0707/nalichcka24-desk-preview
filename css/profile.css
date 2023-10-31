@@ -12,6 +12,8 @@
     --color-07: #fcb316;
     --color-08: #f9f9f9;
     --color-09: #ffffff;
+    --color-10: #bdbdbd;
+    --color-11: #d24e00;
 }
 
 @media (min-width: 576px) {
@@ -330,6 +332,10 @@ body.no-scroll {
     font-weight: 700;
     line-height: 0.9;
     color: var(--_color);
+}
+
+.fullscreen {
+    min-height: calc(var(--fullscreen) - var(--header-height));
 }
 
 @media (max-width: 992px) {

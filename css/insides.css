@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
     --max-width-wrapper: 1920px;
     --max-width-container: 1200px;
@@ -12,6 +14,8 @@
     --color-07: #fcb316;
     --color-08: #f9f9f9;
     --color-09: #ffffff;
+    --color-10: #bdbdbd;
+    --color-11: #d24e00;
 }
 
 @media (min-width: 576px) {
@@ -330,6 +334,10 @@ body.no-scroll {
     font-weight: 700;
     line-height: 0.9;
     color: var(--_color);
+}
+
+.fullscreen {
+    min-height: calc(var(--fullscreen) - var(--header-height));
 }
 
 @media (max-width: 992px) {
@@ -811,5 +819,402 @@ body.no-scroll {
 @media (min-width: 1600px) {
     .footer__partners span {
         font-size: 1.25rem;
+    }
+}
+
+.inputs {
+    --input-pi: 15px;
+    --input-label-fs: 18px;
+    --input-label-clr: var(--color-08);
+    --input-label-mb: 10px;
+    --input-fs: 18px;
+    --input-height: 56px;
+    --input-bg: var(--color-08);
+    --input-border-clr: transparent;
+    --input-border-clr-err: var(--color-11);
+    --input-radius: 15px;
+    --input-clr: var(--color-10);
+    --input-clr-focus: var(--color-05);
+    --input-clr-err: var(--color-11);
+}
+
+@media (min-width: 768px) {
+    .inputs {
+        --input-pi: 20px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .inputs {
+        --input-pi: 25px;
+        --input-label-fs: 20px;
+        --input-label-mb: 15px;
+        --input-fs: 20px;
+    }
+}
+
+/*
+<div class="inputs input">
+  <div class="input__wrapper">
+    <span class="input__label">Электронная почта</span>
+
+    <label class="input__group">
+      <input
+        class="input__target"
+        type="text"
+        placeholder="_____@mail.ru"
+      />
+    </label>
+  </div>
+</div>
+*/
+.input.error .input__target {
+    color: var(--input-border-clr-err);
+    border-color: var(--input-border-clr-err);
+}
+
+.input__label {
+    margin: 0 0 var(--input-label-mb) 0;
+    display: block;
+    font-size: var(--input-label-fs);
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--input-label-clr);
+}
+
+.input__group {
+    display: block;
+}
+
+.input__target {
+    width: 100%;
+    height: var(--input-height);
+    padding: 0 var(--input-pi);
+    display: block;
+    font-size: var(--input-fs);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--input-clr-focus);
+    border: 2px solid var(--input-border-clr);
+    border-radius: var(--input-radius);
+    background: var(--input-bg);
+    transition: border 0.15s linear, color 0.15s linear;
+}
+
+.input__target::-moz-placeholder {
+    color: var(--input-clr);
+}
+
+.input__target::placeholder {
+    color: var(--input-clr);
+}
+
+/*
+<div class="inputs checkbox">
+  <div class="checkbox__wrapper">
+    <label class="chekcbox__label">
+      <input class="checkbox__input" type="checkbox" />
+      <div class="checkbox__icon">
+        <svg>
+          <use
+            href="../images/sprite.svg#check"
+            xlink:href="../images/sprite.svg#check"
+          ></use>
+        </svg>
+      </div>
+
+      <p class="checkbox__text">
+        Я ознакомлен и согласен со <span>следующим</span>
+      </p>
+    </label>
+  </div>
+</div>
+*/
+.checkbox {
+    --chekcbox-icon-size: var(--input-height);
+    --chekcbox-icon-svg-size: 35px;
+    --chekcbox-icon-fill: var(--color-05);
+    --checkbox-fs: 15px;
+}
+
+.checkbox.error .checkbox__icon {
+    border-color: var(--input-border-clr-err);
+}
+
+.checkbox__wrapper {
+    display: flex;
+}
+
+.chekcbox__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .chekcbox__label:hover .checkbox__icon svg {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0) scale(0.8);
+    }
+}
+
+.checkbox__input {
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    z-index: -999;
+}
+
+.checkbox__input:checked + .checkbox__icon svg {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.checkbox__icon {
+    flex: 0 0 var(--chekcbox-icon-size);
+    width: var(--chekcbox-icon-size);
+    height: var(--chekcbox-icon-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--input-border-clr);
+    border-radius: var(--input-radius);
+    background: var(--input-bg);
+    transition: border 0.15s linear;
+    overflow: hidden;
+}
+
+.checkbox__icon svg {
+    flex: 0 0 var(--chekcbox-icon-svg-size);
+    width: 0 0 var(--chekcbox-icon-svg-size);
+    height: 0 0 var(--chekcbox-icon-svg-size);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 5px, 0);
+    transition: opacity 0.15s linear, visibility 0.15s linear, transform 0.15s linear;
+}
+
+.checkbox__text {
+    padding: 0 0 0 1em;
+    font-size: var(--checkbox-fs);
+    font-weight: 600;
+    color: var(--input-label-clr);
+}
+
+.checkbox__text a,
+.checkbox__text span,
+.checkbox__text div {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+    .checkbox__text a:hover,
+  .checkbox__text span:hover,
+  .checkbox__text div:hover {
+        text-decoration: none;
+    }
+}
+
+.title-secondary {
+    --title-secondary-clr: var(--color-08);
+    margin: 0 0 20px 0;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--title-secondary-clr);
+}
+
+.title-secondary span {
+    padding: 1.667em 0 0 0;
+    display: block;
+    font-size: 0.6em;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.title-secondary strong {
+    color: var(--color-01);
+}
+
+@media (min-width: 576px) {
+    .title-secondary {
+        font-size: 1.5rem;
+    }
+
+    .title-secondary span {
+        padding: 0.789em 0 0 0;
+        font-size: 0.469em;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-secondary {
+        font-size: 1.625rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .title-secondary {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .title-secondary {
+        margin: 0 0 30px 0;
+        font-size: 2.375rem;
+    }
+}
+
+.title-secondary_dark {
+    --title-secondary-clr: var(--color-05);
+}
+
+.title-secondary_center {
+    text-align: center;
+}
+
+.container-secondary {
+    --_max-width-container: 1075px;
+    --_padding-inline: var(--container-pi, 15px);
+    margin: 0 auto;
+    padding: 0 var(--_padding-inline);
+    max-width: calc(var(--_max-width-container) + var(--_padding-inline) * 2);
+}
+
+.contacts-data {
+    --gap-block: 20px;
+    padding: 20px 0 50px 0;
+}
+
+.contacts-data__header,
+.contacts-data__body {
+    margin: 0 0 var(--gap-block) 0;
+}
+
+.contacts-data__header .contacts-data__col {
+    gap: 0;
+}
+
+@media (max-width: 768px) {
+    .contacts-data__title {
+        text-align: center;
+    }
+}
+
+.contacts-data__row {
+    display: grid;
+    gap: var(--gap-block);
+}
+
+@media (min-width: 768px) {
+    .contacts-data__row {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .contacts-data__row {
+        gap: 65px;
+    }
+}
+
+.contacts-data__col {
+    display: grid;
+    align-items: center;
+    gap: var(--gap-block);
+}
+
+.contacts-data__preview {
+    width: 100%;
+    height: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.contacts-data__preview p {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.281;
+    color: var(--color-08);
+    position: relative;
+    z-index: 2;
+}
+
+.contacts-data__preview p span {
+    border-bottom: 2px solid var(--color-08);
+}
+
+@media (min-width: 576px) {
+    .contacts-data__preview {
+        height: 150px;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-data__preview {
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .contacts-data__preview p {
+        font-size: 32px;
+    }
+}
+
+.contacts-data__preview-wrapper {
+    height: 100%;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--color-08);
+    overflow: hidden;
+    background-image: url("../images/contacts-data/bg_01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 576px) {
+    .contacts-data__preview-wrapper {
+        padding: 20px 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-data__preview-wrapper {
+        border-radius: 30px;
+    }
+}
+
+.contacts-data__img {
+    width: 200px;
+    height: 0;
+    padding: 0 0 160px 0;
+    position: absolute;
+    right: -25px;
+    bottom: 2px;
+}
+
+@media (min-width: 768px) {
+    .contacts-data__img {
+        width: 58%;
+        padding: 0 0 43% 0;
+        right: -2%;
+        bottom: 3px;
     }
 }
