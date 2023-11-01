@@ -14,6 +14,7 @@
     --color-09: #ffffff;
     --color-10: #bdbdbd;
     --color-11: #d24e00;
+    --color-12: #828282;
 }
 
 @media (min-width: 576px) {
@@ -219,6 +220,19 @@ body.no-scroll {
     }
 }
 
+.button_light {
+    --_clr: var(--color-04);
+    --_bg: var(--color-08);
+    --_bg-hover: var(--color-04);
+    border: 2px solid var(--_bg);
+}
+
+@media (any-hover: hover) {
+    .button_light:hover {
+        --_clr: var(--color-08);
+    }
+}
+
 @media (min-width: 1600px) {
     .button_big {
         --btn-fs: 30px;
@@ -226,24 +240,28 @@ body.no-scroll {
     }
 }
 
-.button_icon img {
+.button_icon svg {
     flex: 0 0 25px;
+    width: 25px;
     height: 25px;
-    margin: 0 5px 0 0;
+    margin: 0 10px 0 0;
     display: block;
+    fill: currentColor;
 }
 
 @media (min-width: 768px) {
-    .button_icon img {
-        flex: 0 0 35px;
-        height: 35px;
+    .button_icon svg {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
     }
 }
 
 @media (min-width: 1600px) {
-    .button_icon img {
-        flex: 0 0 45px;
-        height: 45px;
+    .button_icon svg {
+        flex: 0 0 35px;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -336,6 +354,7 @@ body.no-scroll {
 
 .fullscreen {
     min-height: calc(var(--fullscreen) - var(--header-height));
+    padding: 20px 0 50px 0;
 }
 
 @media (max-width: 992px) {

@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
-    <title>Контактные данные</title>
+    <title>Паспортные данные</title>
     <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
@@ -68,162 +68,117 @@
         </div>
       </header>
       <main class="content">
-        <div class="contacts-data fullscreen">
+        <div class="passport-data fullscreen">
           <div class="container-secondary">
-            <div class="contacts-data__wrapper">
-              <form>
-                <div class="contacts-data__header">
-                  <div class="contacts-data__row">
-                    <div class="contacts-data__col">
-                      <div class="contacts-data__preview">
-                        <div class="contacts-data__preview-wrapper">
-                          <p>
-                            Сумма <span>30 000₽</span><br />до
-                            <span>28 августа</span>
-                          </p>
-                        </div>
-                        <picture class="contacts-data__img image"
-                          ><source
-                            srcset="./images/contacts-data/img_desk.png"
-                            type="image/png"
-                            media="(min-width: 768px)" />
-                          <img
-                            src="./images/contacts-data/img_mobile.png"
-                            alt="img"
-                        /></picture>
+            <div class="passport-data__wrapper">
+              <form class="passport-data__form">
+                <h3 class="title-secondary">Паспортные данные</h3>
+                <div class="passport-data__items">
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <span class="input__label">Серия паспорта</span>
+                      <label class="input__group"
+                        ><input class="input__target" type="text"
+                      /></label>
+                    </div>
+                  </div>
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <span class="input__label">Номер паспорта</span>
+                      <label class="input__group"
+                        ><input class="input__target" type="text"
+                      /></label>
+                    </div>
+                  </div>
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <span class="input__label">Код подразделения</span>
+                      <label class="input__group"
+                        ><input class="input__target" type="text"
+                      /></label>
+                    </div>
+                  </div>
+                  <div class="inputs input input_calendar">
+                    <div class="input__wrapper">
+                      <span class="input__label">Дата выдачи паспорта</span>
+                      <label class="input__group"
+                        ><svg class="input__icon">
+                          <use
+                            href="./images/sprite.svg#calendar"
+                            xlink:href="./images/sprite.svg#calendar"
+                          ></use>
+                        </svg>
+                        <input class="input__target" type="tel"
+                      /></label>
+                    </div>
+                  </div>
+                  <div class="inputs input input_calendar">
+                    <div class="input__wrapper">
+                      <span class="input__label">Дата рождения</span>
+                      <label class="input__group"
+                        ><svg class="input__icon">
+                          <use
+                            href="./images/sprite.svg#calendar"
+                            xlink:href="./images/sprite.svg#calendar"
+                          ></use>
+                        </svg>
+                        <input class="input__target" type="tel"
+                      /></label>
+                    </div>
+                  </div>
+                  <div class="inputs radio">
+                    <div class="radio__wrapper">
+                      <span class="radio__label">Ваш пол</span>
+                      <div class="radio__body">
+                        <label class="radio__group"
+                          ><input
+                            checked="checked"
+                            class="radio__input"
+                            name="sex"
+                            type="radio"
+                            value="male"
+                          />
+                          <div class="radio__button">Мужской</div></label
+                        >
+                        <label class="radio__group"
+                          ><input
+                            class="radio__input"
+                            name="sex"
+                            type="radio"
+                            value="female"
+                          />
+                          <div class="radio__button">Женский</div></label
+                        >
                       </div>
                     </div>
-                    <div class="contacts-data__col">
-                      <h3 class="contacts-data__title title-secondary">
-                        Контактные данные
-                      </h3>
-                      <div class="inputs input">
-                        <div class="input__wrapper">
-                          <span class="input__label">Фамилия</span>
-                          <label class="input__group"
-                            ><input
-                              class="input__target"
-                              type="text"
-                              placeholder="+7 (___) ___-__-__"
-                          /></label>
+                  </div>
+                  <div class="inputs select">
+                    <div class="select__wrapper">
+                      <span class="select__label">Место рождения</span>
+                      <div class="select__body">
+                        <select data-select>
+                          <option value="Москва">Москва</option>
+                          <option value="Санкт-Петербург">
+                            Санкт-Петербург
+                          </option>
+                          <option value="Екатеренбург">Екатеренбург</option>
+                        </select>
+                        <div class="select__icon">
+                          <svg>
+                            <use
+                              href="./images/sprite.svg#arrow"
+                              xlink:href="./images/sprite.svg#arrow"
+                            ></use>
+                          </svg>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="contacts-data__body">
-                  <div class="contacts-data__row">
-                    <div class="contacts-data__col">
-                      <div class="inputs input">
-                        <div class="input__wrapper">
-                          <span class="input__label">Мобильный телефон</span>
-                          <label class="input__group"
-                            ><input
-                              class="input__target"
-                              type="tel"
-                              placeholder="+7 (___) ___-__-__"
-                          /></label>
-                        </div>
-                      </div>
-                      <div class="inputs input">
-                        <div class="input__wrapper">
-                          <span class="input__label">Электронная почта</span>
-                          <label class="input__group"
-                            ><input
-                              class="input__target"
-                              type="email"
-                              placeholder="введите: 'm'"
-                              data-autocomplete
-                          /></label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts-data__col">
-                      <div class="inputs input">
-                        <div class="input__wrapper">
-                          <span class="input__label">Имя</span>
-                          <label class="input__group"
-                            ><input class="input__target" type="text"
-                          /></label>
-                        </div>
-                      </div>
-                      <div class="inputs input">
-                        <div class="input__wrapper">
-                          <span class="input__label">Отчество</span>
-                          <label class="input__group"
-                            ><input class="input__target" type="text"
-                          /></label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="contacts-data__footer">
-                  <div class="contacts-data__row">
-                    <div class="contacts-data__col">
-                      <div class="inputs checkbox">
-                        <div class="checkbox__wrapper">
-                          <label class="chekcbox__label"
-                            ><input class="checkbox__input" type="checkbox" />
-                            <div class="checkbox__icon">
-                              <svg>
-                                <use
-                                  href="./images/sprite.svg#check"
-                                  xlink:href="./images/sprite.svg#check"
-                                ></use>
-                              </svg>
-                            </div>
-                            <p class="checkbox__text">
-                              Я ознакомлен и согласен со
-                              <span data-popup-id="id_popup">следующим</span>
-                            </p></label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts-data__col">
-                      <button class="button button_primary" type="submit">
-                        Далее
-                      </button>
-                    </div>
-                  </div>
+                  <button class="button button_primary" type="submit">
+                    Далее
+                  </button>
                 </div>
               </form>
-            </div>
-          </div>
-          <div id="id_popup" class="popup" data-popup>
-            <div class="popup__wrapper" data-popup-wrapper>
-              <div class="container-secondary">
-                <div class="popup__body" data-popup-body>
-                  <div class="popup__close" data-popup-close>
-                    <svg>
-                      <use
-                        href="./images/sprite.svg#close"
-                        xlink:href="./images/sprite.svg#close"
-                      ></use>
-                    </svg>
-                  </div>
-                  <h4 class="popup__title">Соглашения</h4>
-                  <p class="popup__text">
-                    Даю свое согласие на
-                    <a href="#">обработку персональных данных</a> и на
-                    <a href="#">получение рекламных материалов</a>, принимаю
-                    <a href="#">условия публичной оферты</a>,
-                    <a href="#"
-                      >соглашение о применении рекуррентных платежей и тарифы
-                      сервиса </a
-                    >. Осознаю, что оплата услуг не гарантирует получение займа.
-                    Настоящим подтверждаю, что не являюсь получателем
-                    единовременных и/или регулярных денежных выплат,
-                    предусмотренных Указами Президента РФ.
-                  </p>
-                  <div class="popup__actions">
-                    <a class="popup__button button button_primary" href="#"
-                      >Далее</a
-                    >
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
