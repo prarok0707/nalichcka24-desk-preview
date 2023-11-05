@@ -1489,6 +1489,7 @@ body.no-scroll {
 .offers__itmes {
     display: grid;
     grid-template-columns: minmax(280px, 380px);
+    grid-auto-rows: 1fr;
     justify-content: center;
     gap: 20px;
 }
@@ -1524,8 +1525,15 @@ body.no-scroll {
 }
 
 .offers__logo {
+    width: 100%;
     max-width: 300px;
+    height: 60px;
     margin: 0 0 auto 0;
+}
+
+.offers__logo img {
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .offers__sum {
@@ -2632,7 +2640,7 @@ body.no-scroll {
     position: absolute;
     top: 0.044em;
     left: 0.059em;
-    transition: left 0.2s linear, right 0.2s linear;
+    transition: left 0.1s linear, right 0.1s linear;
 }
 
 .news {
